@@ -1,0 +1,79 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-size:border-box;
+}
+nav{ background-color: rgb(42, 14, 14);
+}
+nav ul{
+    list-style-type: none;
+}
+nav .container{
+    width:1000px;
+    margin: auto;
+}
+nav .row{
+       display: flex; 
+       align-items: center;
+       justify-content: center;
+       flex-wrap: wrap;
+
+}
+nav ul li{ display: inline-block;
+}
+nav ul li a{ 
+    display: inline-block;
+    padding: 30px 10px 35px;
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family:"Inconsolata", monospace ;
+    position: relative;
+}
+nav ul li a:hover{
+    background: rgb(230, 231, 228);
+    color:rgb(251, 6, 6) ;
+}
+nav ul li a::after{
+    content: '';
+    position:absolute;
+    width:0%;
+    height: 4px;
+    background: burlywood;
+    left: 0;
+    bottom: 0;
+    transition:0.4s;
+}
+nav ul li a:hover::after{
+    width: 100%; 
+    margin: 0;
+    display: block;
+
+}
+nav .parent{
+    position: relative;
+}
+nav .child{
+    background-color: rgb(4, 1, 9);
+    position: absolute; 
+    width: 150px;
+    opacity: 0;
+    visibility:hidden;
+    margin-top: 100px;
+    transition: 0.5s;
+}
+nav .child li{
+    width: 100%;
+}
+    nav .child li a{
+        color: rgb(254, 248, 248);
+        width: 100%;
+        display: block;
+    }
+    nav .parent:hover .child{
+        opacity: 1;
+        margin-top: 0;
+        visibility: visible;
+        
+
+    }
